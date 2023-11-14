@@ -15,7 +15,6 @@ public class LoginPageTest extends TestBase {
 	@BeforeMethod
 	void openingBrowser() {
 		intialization();
-		System.out.println("Before method");
 	}
 
 	@Test

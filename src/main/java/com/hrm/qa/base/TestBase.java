@@ -29,17 +29,16 @@ public class TestBase {
 		System.out.println("Properties file loaded");
 	}
 
+	// It will open the browser and launching the application
 	public void intialization() {
 		String browserName = prop.getProperty("browser");
 		System.out.println("Browser name: " + browserName);
 		if (browserName.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver",
-					"/home/sushil/Documents/Automation/BrowserDriver/chromedriver-linux64/chromedriver");
+			System.setProperty("webdriver.chrome.driver", prop.getProperty("browserDriverPathForWindows"));
 			driver = new ChromeDriver();
-			System.out.println("Chrome browser opened sucessfully...");
+			System.out.println("Chrome browser opened sucessfully");
 		} else if (browserName.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.firefox.driver",
-					"/home/sushil/Documents/Automation/BrowserDriver/geckodriver");
+			System.setProperty("webdriver.firefox.driver", prop.getProperty("browserDriverPathForLinux"));
 			driver = new FirefoxDriver();
 			System.out.println("Firefox browser opened sucessfully");
 		} else {
