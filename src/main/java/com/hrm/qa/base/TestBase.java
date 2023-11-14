@@ -48,7 +48,7 @@ public class TestBase {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(prop.getProperty("applicationUrl"));
-		System.out.println("Application launched");
+		System.out.println("Application launched.");
 	}
 
 	public void closingBrowser() {
