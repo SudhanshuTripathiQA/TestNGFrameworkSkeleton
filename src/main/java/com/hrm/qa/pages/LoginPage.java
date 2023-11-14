@@ -1,0 +1,24 @@
+package com.hrm.qa.pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.hrm.qa.base.TestBase;
+
+public class LoginPage extends TestBase {
+
+	// Page Factory
+	@FindBy(xpath = "")
+	WebElement username;
+
+	// Initializing the page objects
+	public LoginPage() {
+		PageFactory.initElements(driver, this);
+	}
+
+	// Actions
+	public String doSomething() {
+		return "";
+	}
+}
