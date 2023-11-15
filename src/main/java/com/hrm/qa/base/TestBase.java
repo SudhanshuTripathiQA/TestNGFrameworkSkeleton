@@ -36,11 +36,11 @@ public class TestBase {
 		if (browserName.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", prop.getProperty("browserDriverPathForWindows"));
 			driver = new ChromeDriver();
-			System.out.println("Chrome browser opened sucessfully");
+			System.out.println("Chrome browser opened sucessfully.");
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.firefox.driver", prop.getProperty("browserDriverPathForLinux"));
 			driver = new FirefoxDriver();
-			System.out.println("Firefox browser opened sucessfully");
+			System.out.println("Firefox browser opened sucessfully.");
 		} else {
 			System.out.println("Please enter valid browser name");
 		}
